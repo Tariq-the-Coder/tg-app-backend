@@ -32,7 +32,7 @@ if (cluster.isMaster) {
   // CORS Configuration
   app.use(
     cors({
-      origin: 'http://localhost:5173', // Allow requests from frontend
+      origin: 'https://open4profit.netlify.app', // Allow requests from frontend
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: [
         'Content-Type',
