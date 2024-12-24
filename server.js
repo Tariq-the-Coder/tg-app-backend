@@ -51,6 +51,11 @@ if (cluster.isMaster) {
   // Routes
   app.use('/api/payments', paymentRoutes);
   app.use('/api/admin', adminRoutes); // Uncomment if required
+  
+  // Add Health Check Route
+  app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', message: 'Service is running.' });
+  });
 
   // Error Handling
   app.use(errorHandler);
